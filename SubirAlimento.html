@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir Alimento</title>
+    <style>
+        /* Colores */
+        :root {
+            --verde-oscuro: #283618;
+            --verde-medio: #606c38;
+            --crema: #fefae0;
+        }
+
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--crema);
+            color: var(--verde-oscuro);
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: var(--verde-oscuro);
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: var(--verde-oscuro);
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: var(--verde-medio);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--verde-oscuro);
+            border-radius: 5px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: var(--verde-oscuro);
+            color: var(--crema);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: var(--verde-medio);
+        }
+    </style>
+</head>
+<body>
+    <h1>Nutrishare</h1>
+    <h2>Subir Alimentos</h2>
+    <form action="ConexionBaseDatos.php" method="POST">
+        <label for="nombre">Nombre del alimento:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion" rows="4"></textarea>
+
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" name="cantidad" required>
+
+        <label for="fecha_caducidad">Fecha de caducidad:</label>
+        <input type="date" id="fecha_caducidad" name="fecha_caducidad" required>
+
+        <input type="submit" value="Subir Alimento">
+    </form>
+</body>
+</html>

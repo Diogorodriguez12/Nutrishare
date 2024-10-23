@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrishare</title>
+    <style>
+        /* Colores */
+        :root {
+            --verde-oscuro: #283618;
+            --verde-medio: #606c38;
+            --crema: #fefae0;
+        }
+
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--crema);
+            color: var(--verde-oscuro);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: var(--verde-oscuro);
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 50px;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .button {
+            background-color: var(--verde-medio);
+            color: var(--crema);
+            padding: 15px 30px;
+            margin: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: var(--verde-oscuro);
+        }
+
+        /* Estructura de la página */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Nutrishare</h1>
+        <button class="button" onclick="window.location.href='ApiMostrarAlimento.php'">Mostrar Alimentos</button>
+        <button class="button" onclick="window.location.href='SubirAlimento.html'">Subir Alimento</button>
+        <button class="button" onclick="window.location.href='eliminar_alimento.php'">Eliminar Alimento</button>
+    </div>
+
+</body>
+</html>
